@@ -123,7 +123,7 @@ export default function PerfilPage() {
         console.error('Error al subir la imagen:', error)
       }
     } else {
-      // Si no hay archivo nuevo, mantener la URL de avatar existente
+
       newAvatarUrl = user.avatarUrl
     }
 

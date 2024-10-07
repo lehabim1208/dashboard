@@ -85,8 +85,7 @@ export default function CrearReporte() {
         Swal.showLoading()
       }
     }).then(() => {
-      // Aquí puedes agregar la lógica para cerrar la sesión si es necesario
-      // Por ejemplo, limpiar el localStorage o las cookies
+
       router.push('/login')
     })
   }
