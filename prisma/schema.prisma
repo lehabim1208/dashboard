@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"          // Indica que la base de datos es MySQL
+  url      = env("DATABASE_URL") // Usa la variable de entorno para la conexión
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Usuario {
+  id       Int     @id @default(autoincrement()) // ID autoincrementable
+  nombre   String  @db.VarChar(100)              // nombre con varchar(100)
+  correo   String  @db.VarChar(250) @unique      // correo con varchar(250), puede ser único
+  password String  @db.VarChar(100)              // password con varchar(100)
+  
+  @@map("usuarios") // Mapea este modelo a la tabla "usuarios" existente
+}
